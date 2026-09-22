@@ -16,7 +16,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 21 September 2026 · Effective: 21 September 2026</p>
+<p class="updated">Last updated: 22 September 2026 · Effective: 22 September 2026</p>
 
 <div class="lede">
   <h2>The short version</h2>
@@ -24,7 +24,7 @@
     <li><strong>Your face photos are never stored on our servers.</strong> They are sent once, analysed, and discarded. The only lasting copy lives in the Facely app on your device.</li>
     <li><strong>Your photos are processed by Google's Gemini AI.</strong> To score a scan and to generate your "potential" image, we send your photos to the Google Gemini API. This is essential to how Facely works.</li>
     <li><strong>We don't know who you are.</strong> Facely creates an anonymous account. We never ask for your name, email address, phone number or password, and we don't use social sign-in.</li>
-    <li><strong>We don't sell or share your data</strong> for advertising, and Facely contains no ad networks and no third-party analytics or tracking SDKs.</li>
+    <li><strong>We don't sell or share your data</strong> for advertising, and Facely contains no ad networks and no tracking SDKs. Our paywall provider, Superwall, records how you interact with the subscription screen and what you purchase — and nothing else about you.</li>
     <li><strong>We don't use face recognition.</strong> Facely assesses facial features to produce an aesthetic score. It does not identify you, match you against any database, or build a faceprint.</li>
     <li><strong>You can delete everything</strong> from inside the app: Profile → Delete my account.</li>
   </ul>
@@ -83,6 +83,10 @@
 
 <h3>Information stored only on your device</h3>
 <p>The app keeps the following in its own storage on your phone, where we cannot read it: your scan photos and any generated potential image, your display name, whether you have finished onboarding, and your reminder preferences and scheduled reminder identifiers.</p>
+
+<h3>Subscription and paywall information</h3>
+<p>When the subscription screen appears, our paywall provider (Superwall) records that it was shown and what you did with it — dismissed it, started a free trial, or subscribed — along with your device model, operating system version, app version, locale, and an identifier its software generates for your installation of the app. If you subscribe, it records which product you bought and whether your subscription is active, so the app knows what to unlock.</p>
+<p>That identifier is separate from your Facely account ID, and we do not connect the two. Superwall receives no photos, no scores, no routine data and no coach conversations.</p>
 
 <h3>Technical and diagnostic information</h3>
 <p>Our hosting provider records ordinary server logs when the app talks to our backend, including IP address, timestamp and the request made. These are used for security, abuse prevention and debugging, and are retained for a short period.</p>
@@ -156,7 +160,8 @@
 <h2 id="never">6. What we never do</h2>
 <ul>
   <li>We do not sell your personal information, and we do not share it for cross-context behavioural advertising. We have never done so.</li>
-  <li>Facely contains no advertising SDKs, no third-party analytics SDKs and no tracking pixels. We do not track you across other apps or websites, and we do not use the Apple advertising identifier (IDFA) or ask for App Tracking Transparency permission.</li>
+  <li>Facely contains no advertising SDKs and no tracking pixels, and we run no general-purpose analytics on how you use the app. The single exception is the paywall measurement described in <a href="#collect">section 2</a>, which covers the subscription screen only. We do not track you across other apps or websites, and we do not use the Apple advertising identifier (IDFA) or ask for App Tracking Transparency permission.</li>
+  <li>We do not send your photos, scores, routine or coach conversations to our paywall provider. It is told whether to show a paywall, not who you are.</li>
   <li>We do not use facial recognition, identity matching or face search. Facely never attempts to work out who you are.</li>
   <li>We do not collect your location. The app requests no location permission.</li>
   <li>We do not access your contacts, calendar, microphone, health data or messages.</li>
@@ -178,6 +183,7 @@
   <tr><th>Provider</th><th>Role</th><th>What they receive</th></tr>
   <tr><td><strong>Google</strong> (Gemini API)</td><td>AI analysis</td><td>Photos, scan results, routine tasks and coach messages, as set out in section 4</td></tr>
   <tr><td><strong>Supabase</strong></td><td>Database, authentication and backend hosting</td><td>All data we store: your anonymous account ID, scan results, profile answers, routine records, coach messages and feedback. No photos.</td></tr>
+  <tr><td><strong>Superwall</strong></td><td>Presenting the subscription paywall and tracking whether your subscription is active</td><td>Device and app information, an identifier generated for your installation, which paywalls you were shown and what you did with them, and your purchase and subscription status. No photos, scans, routine data or coach messages.</td></tr>
   <tr><td><strong>Apple</strong></td><td>App distribution, in-app purchases and, if you allow it, crash reporting</td><td>Purchase and subscription information, which Apple handles under its own privacy policy. Apple never receives your scans or photos from us.</td></tr>
 </table>
 <p>We may also disclose information if we are legally required to, or where it is necessary to investigate abuse, fraud or a threat to someone's safety. If Facely is ever acquired or merged, data may transfer to the acquiring entity, which would remain bound by this policy or give you notice of any change.</p>
@@ -236,7 +242,7 @@
 <p>Because Facely rates appearance, we consider it unsuitable for younger teenagers regardless of legal minimums, and it is rated accordingly on the App Store. If you believe a child has provided us with information, contact <a href="mailto:awalehussein2004@gmail.com">awalehussein2004@gmail.com</a> and we will delete it.</p>
 
 <h2 id="transfers">13. International transfers</h2>
-<p>Facely is operated from Ontario, Canada. Its data is stored and processed in facilities that may be located outside your country — and outside Canada — including in the United States, where our hosting and AI providers operate. Information stored outside Canada may be accessible to the courts and law enforcement of that country under its laws. Where we transfer personal data out of the EEA or the UK, we rely on the European Commission's Standard Contractual Clauses, or an equivalent lawful transfer mechanism, in our agreements with our providers.</p>
+<p>Facely is operated from Ontario, Canada. Its data is stored and processed in facilities that may be located outside your country — and outside Canada — including in the United States, where our hosting, AI and paywall providers operate. Information stored outside Canada may be accessible to the courts and law enforcement of that country under its laws. Where we transfer personal data out of the EEA or the UK, we rely on the European Commission's Standard Contractual Clauses, or an equivalent lawful transfer mechanism, in our agreements with our providers.</p>
 
 <h2 id="labels">14. App Store privacy summary</h2>
 <p>For reference, this is how the data described above maps to Apple's privacy categories. Nothing in Facely is used for tracking or for third-party advertising.</p>
@@ -246,7 +252,8 @@
   <tr><td>Health &amp; fitness (height, weight)</td><td>Yes</td><td>Linked to an anonymous ID only</td><td>No</td></tr>
   <tr><td>Other user content (coach messages, feedback)</td><td>Yes</td><td>Linked to an anonymous ID only</td><td>No</td></tr>
   <tr><td>User ID</td><td>Yes — randomly generated, anonymous</td><td>N/A</td><td>No</td></tr>
-  <tr><td>Purchases</td><td>Yes — handled by Apple</td><td>No</td><td>No</td></tr>
+  <tr><td>Purchases</td><td>Yes — billed by Apple, recorded by Superwall</td><td>No</td><td>No</td></tr>
+  <tr><td>Product interaction (subscription screen only)</td><td>Yes</td><td>No</td><td>No</td></tr>
   <tr><td>Diagnostics</td><td>Yes — server logs and optional crash reports</td><td>No</td><td>No</td></tr>
   <tr><td>Contact info, location, contacts, browsing history, search history, advertising data</td><td>No</td><td>—</td><td>—</td></tr>
 </table>
