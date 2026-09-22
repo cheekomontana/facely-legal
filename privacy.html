@@ -21,7 +21,7 @@
 <div class="lede">
   <h2>The short version</h2>
   <ul>
-    <li><strong>Your face photos are never stored on our servers.</strong> They are sent once, analysed, and discarded. The only lasting copy lives in the Facely app on your device.</li>
+    <li><strong>Your face photos are never stored on our servers.</strong> They are sent once, analysed, and discarded. Facely keeps its local copy in the app on your device; depending on your Apple backup settings, iOS may also include that copy in an iCloud or encrypted Finder/iTunes backup.</li>
     <li><strong>Your photos are processed by Google's Gemini AI.</strong> To score a scan and to generate your "potential" image, we send your photos to the Google Gemini API. This is essential to how Facely works.</li>
     <li><strong>We don't know who you are.</strong> Facely creates an anonymous account. We never ask for your name, email address, phone number or password, and we don't use social sign-in.</li>
     <li><strong>We don't sell or share your data</strong> for advertising, and Facely contains no ad networks and no tracking SDKs. Our paywall provider, Superwall, records how you interact with the subscription screen and what you purchase — and nothing else about you.</li>
@@ -81,8 +81,8 @@
 <h3>Your account identifier</h3>
 <p>Facely signs you in anonymously. Our systems hold a randomly generated account ID and the dates the account was created and last seen. That ID is not linked to your name, email address, phone number, Apple ID, advertising identifier or any other real-world identity.</p>
 
-<h3>Information stored only on your device</h3>
-<p>The app keeps the following in its own storage on your phone, where we cannot read it: your scan photos and any generated potential image, your display name, whether you have finished onboarding, and your reminder preferences and scheduled reminder identifiers.</p>
+<h3>Information stored in the app on your device</h3>
+<p>The app keeps the following in its own private storage on your phone, where we cannot read it: your scan photos and any generated potential image, your display name, whether you have finished onboarding, and your reminder preferences and scheduled reminder identifiers. Because the photo files are kept in the app's Documents storage, iOS may include them in an iCloud or encrypted Finder/iTunes backup, depending on your device settings. Those backups are controlled by Apple and your device; Facely does not receive or manage them.</p>
 
 <h3>Subscription and paywall information</h3>
 <p>When the subscription screen appears, our paywall provider (Superwall) records that it was shown and what you did with it — dismissed it, started a free trial, or subscribed — along with your device model, operating system version, app version, locale, and an identifier its software generates for your installation of the app. If you subscribe, it records which product you bought and whether your subscription is active, so the app knows what to unlock.</p>
@@ -94,7 +94,7 @@
 
 <h2 id="photos">3. What happens to your photos</h2>
 <div class="callout">
-  <p><strong>Facely has no photo storage.</strong> There is no photo bucket, no photo column in our database, and no backup containing your images. This is a deliberate part of how the app is built, not just a policy promise.</p>
+  <p><strong>Facely has no photo storage.</strong> There is no photo bucket, no photo column in our database, and no backup of your images on our systems. iOS may include the local app copy in an iCloud or encrypted Finder/iTunes backup according to your device settings. This is a deliberate part of how the app is built, not just a policy promise.</p>
 </div>
 <p>The full journey of a scan photo is:</p>
 <ol>
@@ -191,7 +191,7 @@
 <h2 id="retention">9. Storage, retention and deletion</h2>
 <table>
   <tr><th>Data</th><th>Where</th><th>Kept for</th></tr>
-  <tr><td>Face photos</td><td>Your device only; in memory on our servers during a request</td><td>On your device until you delete them or the app; on our servers, seconds</td></tr>
+  <tr><td>Face photos</td><td>Your device and, depending on your Apple backup settings, iCloud or encrypted Finder/iTunes backups; in memory on our servers during a request</td><td>On your device until you delete them or the app; Apple backup copies follow Apple's backup retention and deletion controls; on our servers, seconds</td></tr>
   <tr><td>Scan scores and history</td><td>Our database</td><td>Until you delete your account</td></tr>
   <tr><td>Profile answers</td><td>Our database</td><td>Until you delete your account</td></tr>
   <tr><td>Routine and streak records</td><td>Our database</td><td>Until you delete your account</td></tr>
@@ -201,7 +201,7 @@
 </table>
 
 <h3>Deleting your account</h3>
-<p>Open <strong>Profile → Delete my account</strong>. This permanently deletes your account and everything attached to it — your scan history, profile answers, routine records, coach conversations and feedback — and cannot be undone. The app also clears the data held on your device, including your locally stored scan photos and potential image, and cancels any scheduled reminders.</p>
+<p>Open <strong>Profile → Delete my account</strong>. This permanently deletes your account and everything attached to it — your scan history, profile answers, routine records, coach conversations and feedback — and cannot be undone. The app also clears the data held on your device, including your locally stored scan photos and potential image, and cancels any scheduled reminders. It does not itself remove copies already captured by Apple backups; manage those through Apple's device and backup controls.</p>
 <p>The only thing that survives is the anonymous scan fingerprint described in section 3, which holds no identifier that could connect it to you or to your deleted account.</p>
 
 <h3>Signing out</h3>
