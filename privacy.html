@@ -151,7 +151,7 @@
   <li><strong>To generate your potential preview</strong>, when you ask for one.</li>
   <li><strong>To track your progress</strong> — streaks, weekly recaps, habit graduation and before/after comparisons.</li>
   <li><strong>To send you local reminders</strong>, if you turn them on.</li>
-  <li><strong>To keep the service running and fair</strong> — preventing abuse, enforcing the limit of five scans per rolling 24 hours, debugging faults and keeping costs sustainable.</li>
+  <li><strong>To keep the service running and fair</strong> — preventing abuse, enforcing the limit of five scans per UTC calendar day, debugging faults and keeping costs sustainable.</li>
   <li><strong>To manage subscriptions</strong>, where you purchase one.</li>
   <li><strong>To respond to feedback</strong> you send us.</li>
 </ul>
@@ -182,7 +182,7 @@
 <table>
   <tr><th>Provider</th><th>Role</th><th>What they receive</th></tr>
   <tr><td><strong>Google</strong> (Gemini API)</td><td>AI analysis</td><td>Photos, scan results, routine tasks and coach messages, as set out in section 4</td></tr>
-  <tr><td><strong>Supabase</strong></td><td>Database, authentication and backend hosting</td><td>All data we store: your anonymous account ID, scan results, profile answers, routine records, coach messages and feedback. No photos.</td></tr>
+  <tr><td><strong>Supabase</strong></td><td>Database, authentication and backend hosting</td><td>All data we store: your anonymous account ID, scan results, profile answers, routine records, coach messages, feedback, <code>public.generation_log</code> records and <code>public.scan_quota</code> daily counters. No photos.</td></tr>
   <tr><td><strong>Superwall</strong></td><td>Presenting the subscription paywall and tracking whether your subscription is active</td><td>Device and app information, an identifier generated for your installation, which paywalls you were shown and what you did with them, and your purchase and subscription status. No photos, scans, routine data or coach messages.</td></tr>
   <tr><td><strong>Apple</strong></td><td>App distribution, in-app purchases and, if you allow it, crash reporting</td><td>Purchase and subscription information, which Apple handles under its own privacy policy. Apple never receives your scans or photos from us.</td></tr>
 </table>
@@ -196,6 +196,7 @@
   <tr><td>Profile answers</td><td>Our database</td><td>Until you delete your account</td></tr>
   <tr><td>Routine and streak records</td><td>Our database</td><td>Until you delete your account</td></tr>
   <tr><td>AI Coach messages</td><td>Our database</td><td>Until you delete your account</td></tr>
+  <tr><td>Usage and rate-limit records (<code>public.generation_log</code> and <code>public.scan_quota</code>)</td><td>Our database</td><td>Until you delete your account</td></tr>
   <tr><td>Scan fingerprint (hash) and score</td><td>Our database, unlinked to any account</td><td>Indefinitely, as it contains no personal identifier</td></tr>
   <tr><td>Server logs</td><td>Our hosting provider</td><td>A short period, for security and debugging</td></tr>
 </table>
